@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishEye</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="photographeHeader">
+        <a class="logo" href="index.html" tabindex="1">
+            <img src="assets/images/logo.png" alt="FishEye home page">
+        </a>
+    </header>
+
+    <main>
+        <section class="photographeInfo"></section>
+        <section class="photographies">
+            <div class="trier">
+                <label for="trier" class="trier__text">Trier par</label>
+                <select name="trier" id="trier" class="trier__select" tabindex="4" aria-label="Order by">
+                    <option value="popularite" selected>Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="titre">Titre</option>
+                </select>
+            </div>
+            <div class="photographies__liste"></div>
+        </section>
+        <aside class="aside">
+            <div class="aside__likes">
+                <div id="likes"></div>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div id="prix"></div>
+        </aside>
+        <button class="asideButton">Contactez-moi</button>
+        <div class="backgroundModal">
+            <div class="modalContact" aria-labelledby="contactTitre">
+                <div class="modalContact__body">
+                    <h1 class="modalContact__titre" id="contactTitre">Contactez-moi <br> Mimi Keel</h1>
+                    <button class="modalContact__croix"><i class="fas fa-times"></i></button>
+                    <form action="photographe.html" method="post" name="contactPhotographe">
+                        <div class="modalContact__champ">
+                            <label class="labelForm" for="prenom">Prénom</label><br>
+                            <input class="modalContact__input" type="text" name="prenom" id="prenom" required="">
+                        </div>
+                        <div class="modalContact__champ">
+                            <label class="labelForm" for="nom">Nom</label><br>
+                            <input class="modalContact__input" type="text" name="nom" id="nom" required="">
+                        </div>
+                        <div class="modalContact__champ">
+                            <label class="labelForm" for="email">Email</label><br>
+                            <input class="modalContact__input" type="email" name="email" id="email" required="">
+                        </div>
+                        <div class="modalContact__champ">
+                            <label class="labelForm" for="message">Votre message</label><br>
+                            <input class="modalContact__input modalContact__message" type="text" name="message"
+                                id="message" required="">
+                        </div>
+                        <button type="submit" class="modalContact__buttonSubmit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Factories -->
+    <script src="scripts/factories/PhotographesFactory.js"></script>
+    <script src="scripts/factories/MediaFactory.js"></script>
+
+    <!-- Pages -->
+    <script src="scripts/js/Lightbox.js"></script>
+    <script src="scripts/js/photographePage.js"></script>
+
+</body>
+</html>
