@@ -6,11 +6,11 @@ function mediaFactory(data) {
         let media = `
                             <div class="photographies__card">`;
         if (typeof data.image !== "undefined") {
-            media += `<img tabindex="5" class="photographies__img" src="scripts/images/${photographerId}/${image}"
+            media += `<img tabindex="5" class="photographies__img" src="./assets/images/Photographers/${photographerId}/${image}"
                                             alt="${alt}, closeup view">`
         } else {
             media += `<video tabindex="5" controls class="photographies__img">
-                                                <source src="scripts/images/${photographerId}/${video}" type="video/mp4">
+                                                <source src="./assets/images/Photographers/${photographerId}/${video}" type="video/mp4">
                                             </video>`
         };
         media += `<div class="photographies__legende">

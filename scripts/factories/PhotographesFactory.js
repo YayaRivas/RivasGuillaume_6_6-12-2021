@@ -7,7 +7,7 @@ function photographerFactory(data) {
         let article = document.createElement('article');
         let photographeInfo =
             `
-                <a class="photographe lienCard" href="photographe.html?id=${id}" aria-label="Aller sur la page de ${name}
+                <a class="photographe lienCard" href="photographer.html?id=${id}" aria-label="Aller sur la page de ${name}
                  basé à ${city}, ${country} sont tarif journalier est de ${price} euro par jour.
                   Ses spécialité sont ${tags} et sa devise ${tagline}">
                     <figure class="photographe__figure">

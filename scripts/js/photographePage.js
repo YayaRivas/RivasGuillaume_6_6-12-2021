@@ -19,7 +19,7 @@ function filtrePhotographie(e) {
 async function getInfoPhotographers() {
     photographiesListe.innerHTML = "";
     // Penser à remplacer par les données récupérées dans le json
-    fetch('FishEyeData.json')
+    fetch('./data/FishEyeData.json')
         .then(res => res.json())
         .then(data => {
             data.photographers.forEach(photographe => {
